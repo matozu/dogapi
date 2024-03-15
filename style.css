@@ -1,0 +1,18 @@
+#search-form {
+    text-align: center;
+    margin: 30px 0;
+}
+
+button:enabled {
+    cursor: pointer;
+}
+
+.pagination {
+    margin: 30px 0;
+}
+
+.result-item {
+    border: 1px solid black;
+    margin: 20px 10px;
+    padding: 10px;
+}
