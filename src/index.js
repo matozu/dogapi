@@ -1,5 +1,5 @@
 import { fetchData } from "./fetchData";
-import _ from "lodash";
+import join from "lodash/join";
 
 const mainTitle = document.querySelector(".main-title");
 const searchForm = document.querySelector("form#search-form");
@@ -15,7 +15,7 @@ let results = null;
 
 var pageNumber = 1;
 
-mainTitle.textContent = _.join(["hello", "webpack"], " ");
+mainTitle.textContent = join(["hello", "webpack"], " ");
 searchForm.onsubmit = (event) => {
   event.preventDefault();
   fetchData(url, pageNumber).then((result) => {
