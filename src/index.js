@@ -1,3 +1,7 @@
+import { fetchData } from "./fetchData";
+import _ from "lodash";
+
+const mainTitle = document.querySelector(".main-title");
 const searchForm = document.querySelector("form#search-form");
 const searchInput = document.querySelector("input#search-input");
 const resultsDiv = document.querySelector("div#results");
@@ -11,13 +15,7 @@ let results = null;
 
 var pageNumber = 1;
 
-function fetchData(url, pageNumber) {
-  url = url + "?page[number]=" + pageNumber;
-  return fetch(url)
-    .then((response) => response.json())
-    .catch((error) => console.log(error));
-}
-
+mainTitle.textContent = _.join(["hello", "webpack"], " ");
 searchForm.onsubmit = (event) => {
   event.preventDefault();
   fetchData(url, pageNumber).then((result) => {
